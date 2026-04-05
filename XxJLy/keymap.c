@@ -573,9 +573,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 
-const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
+const key_override_t delete_key_override    = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
+const key_override_t shift_9_override       = ko_make_basic(MOD_MASK_SHIFT, KC_9, KC_TILD);
+const key_override_t ctrl_2_override        = ko_make_basic(MOD_MASK_CTRL, KC_2, KC_LPRN);
+const key_override_t ctrl_3_override        = ko_make_basic(MOD_MASK_CTRL, KC_3, KC_LCBR);
+const key_override_t ctrl_4_override        = ko_make_basic(MOD_MASK_CTRL, KC_4, KC_LBRC);
+const key_override_t ctrl_7_override        = ko_make_basic(MOD_MASK_CTRL, KC_7, KC_RBRC);
+const key_override_t ctrl_8_override        = ko_make_basic(MOD_MASK_CTRL, KC_8, KC_RCBR);
+const key_override_t ctrl_9_override        = ko_make_basic(MOD_MASK_CTRL, KC_9, KC_RPRN);
 
-// This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
-	&delete_key_override
+    &delete_key_override,
+    &shift_9_override,
+    &ctrl_2_override,
+    &ctrl_3_override,
+    &ctrl_4_override,
+    &ctrl_7_override,
+    &ctrl_8_override,
+    &ctrl_9_override,
+    NULL
 };
