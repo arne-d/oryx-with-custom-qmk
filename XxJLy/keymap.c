@@ -425,15 +425,15 @@ void dance_6_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[6].step = dance_step(state);
     switch (dance_state[6].step) {
         case SINGLE_TAP:  register_code16(KC_CAPS); break;
-        case SINGLE_HOLD: register_code16(QK_CAPS_WORD_TOGGLE); break;
+        case SINGLE_HOLD: tap_code16(QK_CAPS_WORD_TOGGLE); break;
     }
 }
 
 void dance_6_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[6].step) {
-        case SINGLE_TAP:  unregister_code16(KC_CAPS); break;
-        case SINGLE_HOLD: unregister_code16(QK_CAPS_WORD_TOGGLE); break;
+        case SINGLE_TAP: unregister_code16(KC_CAPS); break;
+        // No unregister needed for SINGLE_HOLD, tap_code16 handles it fully
     }
     dance_state[6].step = 0;
 }
