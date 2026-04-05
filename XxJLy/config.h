@@ -26,7 +26,7 @@
 #define MOUSEKEY_TIME_TO_MAX 65
 
 #define CAPS_LOCK_STATUS
-#define SERIAL_NUMBER "XxJLy/v6b0Nb"
+#define SERIAL_NUMBER "XxJLy/0W57Ow"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 1
 
