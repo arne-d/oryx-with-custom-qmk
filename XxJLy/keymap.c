@@ -21,14 +21,14 @@ enum tap_dance_codes {
   DANCE_5,
 };
 
-#define DUAL_FUNC_0 LT(11, KC_Q)
-#define DUAL_FUNC_1 LT(5, KC_F17)
-#define DUAL_FUNC_2 LT(2, KC_C)
-#define DUAL_FUNC_3 LT(1, KC_8)
-#define DUAL_FUNC_4 LT(3, KC_F16)
-#define DUAL_FUNC_5 LT(12, KC_6)
-#define DUAL_FUNC_6 LT(7, KC_F5)
-#define DUAL_FUNC_7 LT(15, KC_R)
+#define DUAL_FUNC_0 LT(6, KC_A)
+#define DUAL_FUNC_1 LT(10, KC_F13)
+#define DUAL_FUNC_2 LT(5, KC_F)
+#define DUAL_FUNC_3 LT(15, KC_W)
+#define DUAL_FUNC_4 LT(4, KC_U)
+#define DUAL_FUNC_5 LT(6, KC_F7)
+#define DUAL_FUNC_6 LT(5, KC_F3)
+#define DUAL_FUNC_7 LT(8, KC_F15)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [1] = LAYOUT_voyager(
     QK_LLCK,        KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,                                          KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,         
     NAVIGATOR_TURBO,KC_RIGHT_ALT,   KC_WWW_BACK,    KC_MS_BTN3,     KC_WWW_FORWARD, TOGGLE_SCROLL,                                  KC_NO,          KC_7,           KC_8,           KC_9,           KC_NO,          KC_F12,         
-    NAVIGATOR_AIM,  KC_LEFT_SHIFT,  DRAG_SCROLL,    KC_MS_BTN2,     KC_MS_BTN1,     DRAG_SCROLL,                                    KC_NO,          KC_4,           KC_5,           KC_6,           KC_ASTR,        KC_PLUS,        
+    NAVIGATOR_AIM,  KC_LEFT_SHIFT,  KC_LEFT_GUI,    KC_MS_BTN2,     KC_MS_BTN1,     DRAG_SCROLL,                                    KC_NO,          KC_4,           KC_5,           KC_6,           KC_ASTR,        KC_PLUS,        
     KC_LEFT_CTRL,   DUAL_FUNC_1,    DUAL_FUNC_2,    DUAL_FUNC_3,    DUAL_FUNC_4,    LGUI(LSFT(KC_V)),                                KC_NO,          KC_1,           KC_2,           KC_3,           KC_SLASH,       KC_MINUS,       
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_DOT,         KC_0
   ),
