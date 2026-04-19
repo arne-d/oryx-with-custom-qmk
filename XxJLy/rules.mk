@@ -7,6 +7,6 @@ SPACE_CADET_ENABLE = no
 
 
 
-Custom QMK
+# Custom stuff
 KEY_OVERRIDE_ENABLE = yes
 CAPS_WORD_ENABLE = yes
