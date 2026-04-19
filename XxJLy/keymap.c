@@ -21,14 +21,14 @@ enum tap_dance_codes {
   DANCE_5,
 };
 
-#define DUAL_FUNC_0 LT(12, KC_B)
-#define DUAL_FUNC_1 LT(13, KC_U)
-#define DUAL_FUNC_2 LT(7, KC_C)
-#define DUAL_FUNC_3 LT(13, KC_F13)
-#define DUAL_FUNC_4 LT(4, KC_F15)
-#define DUAL_FUNC_5 LT(4, KC_H)
-#define DUAL_FUNC_6 LT(6, KC_B)
-#define DUAL_FUNC_7 LT(10, KC_O)
+#define DUAL_FUNC_0 LT(1, KC_F1)
+#define DUAL_FUNC_1 LT(4, KC_A)
+#define DUAL_FUNC_2 LT(9, KC_A)
+#define DUAL_FUNC_3 LT(5, KC_0)
+#define DUAL_FUNC_4 LT(10, KC_F1)
+#define DUAL_FUNC_5 LT(3, KC_B)
+#define DUAL_FUNC_6 LT(14, KC_B)
+#define DUAL_FUNC_7 LT(3, KC_P)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESCAPE,      KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,                                           KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_BSLS,        
     KC_CAPS,        MT(MOD_LALT, KC_A),MT(MOD_LGUI, KC_R),MT(MOD_LSFT, KC_S),MT(MOD_LCTL, KC_T),KC_G,                                           KC_M,           MT(MOD_RCTL, KC_N),MT(MOD_RSFT, KC_E),MT(MOD_RGUI, KC_I),MT(MOD_LALT, KC_O),DUAL_FUNC_0,    
     KC_EQUAL,       KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_MINUS,       
-                                                    LT(1, KC_ENTER),KC_TAB,                                         KC_BSPC,        LT(2, KC_SPACE)
+                                                    LT(1, KC_BSPC), KC_ENTER,                                       KC_TAB,         LT(2, KC_SPACE)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,                                          KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,         
@@ -86,9 +86,9 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT(
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LT(1, KC_ENTER):
+        case LT(1, KC_BSPC):
             return TAPPING_TERM -30;
-        case KC_BSPC:
+        case KC_TAB:
             return TAPPING_TERM -30;
         case LT(2, KC_SPACE):
             return TAPPING_TERM -30;
