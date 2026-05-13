@@ -584,7 +584,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 
-const key_override_t delete_key_override    = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
+const key_override_t delete_key_override    = ko_make_basic(MOD_MASK_SHIFT, LT(1, KC_BSPC), KC_DEL);
 const key_override_t shift_9_override       = ko_make_basic(MOD_MASK_SHIFT, KC_9, KC_TILD);
 const key_override_t ctrl_2_override        = ko_make_basic(MOD_MASK_CTRL, KC_2, KC_LPRN);
 const key_override_t ctrl_3_override        = ko_make_basic(MOD_MASK_CTRL, KC_3, KC_LCBR);
