@@ -21,14 +21,14 @@ enum tap_dance_codes {
   DANCE_5,
 };
 
-#define DUAL_FUNC_0 LT(1, KC_F1)
-#define DUAL_FUNC_1 LT(4, KC_A)
-#define DUAL_FUNC_2 LT(9, KC_A)
-#define DUAL_FUNC_3 LT(5, KC_0)
-#define DUAL_FUNC_4 LT(10, KC_F1)
-#define DUAL_FUNC_5 LT(3, KC_B)
-#define DUAL_FUNC_6 LT(14, KC_B)
-#define DUAL_FUNC_7 LT(3, KC_P)
+#define DUAL_FUNC_0 LT(14, KC_Y)
+#define DUAL_FUNC_1 LT(4, KC_G)
+#define DUAL_FUNC_2 LT(9, KC_9)
+#define DUAL_FUNC_3 LT(13, KC_9)
+#define DUAL_FUNC_4 LT(8, KC_F21)
+#define DUAL_FUNC_5 LT(3, KC_8)
+#define DUAL_FUNC_6 LT(13, KC_F8)
+#define DUAL_FUNC_7 LT(7, KC_Y)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
@@ -477,9 +477,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_2:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(LGUI(KC_X));
+          register_code16(LCTL(KC_X));
         } else {
-          unregister_code16(LGUI(KC_X));
+          unregister_code16(LCTL(KC_X));
         }
       } else {
         if (record->event.pressed) {
@@ -492,9 +492,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_3:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(LGUI(KC_C));
+          register_code16(LCTL(KC_C));
         } else {
-          unregister_code16(LGUI(KC_C));
+          unregister_code16(LCTL(KC_C));
         }
       } else {
         if (record->event.pressed) {
@@ -507,9 +507,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case DUAL_FUNC_4:
       if (record->tap.count > 0) {
         if (record->event.pressed) {
-          register_code16(LGUI(KC_V));
+          register_code16(LCTL(KC_V));
         } else {
-          unregister_code16(LGUI(KC_V));
+          unregister_code16(LCTL(KC_V));
         }
       } else {
         if (record->event.pressed) {
