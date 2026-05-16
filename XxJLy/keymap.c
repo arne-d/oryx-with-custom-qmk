@@ -592,6 +592,8 @@ const key_override_t ctrl_4_override        = ko_make_basic(MOD_MASK_CTRL, KC_4,
 const key_override_t ctrl_7_override        = ko_make_basic(MOD_MASK_CTRL, KC_7, KC_RBRC);
 const key_override_t ctrl_8_override        = ko_make_basic(MOD_MASK_CTRL, KC_8, KC_RCBR);
 const key_override_t ctrl_9_override        = ko_make_basic(MOD_MASK_CTRL, KC_9, KC_RPRN);
+const key_override_t ctrl_enter_tab_override = ko_make_basic(MOD_MASK_CTRL, KC_ENTER, KC_TAB);
+const key_override_t ctrl_shift_enter_backtab_override = ko_make_basic(MOD_MASK_CTRL | MOD_MASK_SHIFT, KC_ENTER, S(KC_TAB));
 
 const key_override_t *key_overrides[] = {
     &delete_key_override,
@@ -602,5 +604,7 @@ const key_override_t *key_overrides[] = {
     &ctrl_7_override,
     &ctrl_8_override,
     &ctrl_9_override,
+    &ctrl_enter_tab_override,
+    &ctrl_shift_enter_backtab_override,
     NULL
 };
