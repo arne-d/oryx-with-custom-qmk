@@ -597,7 +597,7 @@ const key_override_t ctrl_enter_tab_override = ko_make_basic(MOD_MASK_CTRL, KC_E
 const key_override_t *key_overrides[] = {
     &delete_key_override,
     &shift_9_override,
-    &ctrl_2_override,
+    &ctrl_0_override,
     &ctrl_3_override,
     &ctrl_4_override,
     &ctrl_7_override,
